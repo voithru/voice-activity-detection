@@ -1,0 +1,6 @@
+type: Message
+
+- Add something
+- Delete something
+
+Refs:
