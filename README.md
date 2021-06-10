@@ -46,7 +46,7 @@ Usage: main.py predict [OPTIONS] AUDIO_PATH CHECKPOINT_PATH
 
 ## Overview
 <p align="center">
-  <img width="350" alt="teaser" src="./figures/architecture.png">
+  <img width="500" alt="teaser" src="./figures/architecture.png">
   <br>
   <b>Figure. Overall architecture</b>
 </p>
