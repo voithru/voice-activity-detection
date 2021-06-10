@@ -1,0 +1,50 @@
+train_val_dir: tests/data/JamakeSpeechSample
+train_path: vad-train-sample.jsonl
+val_path: vad-train-sample.jsonl
+data_dir: null
+runs_dir: results/tests
+run_name: vad/jamake-speech-sample
+context_resolution:
+    context_window_half_frames: 19
+    context_window_jump_frames: 9
+    context_window_shift_frames: 39
+dataset_chunk_size: 1
+noise_injector:
+    noise_path: tests/data/YoutubeEditorSoundEffectsSample/data_list.txt
+    noise_data_dir: null
+    noise_ratio: 0.2
+    min_snr: -5
+    max_snr: 6
+feature_extractor:
+    transform:
+        name: "log-mel"
+        n_fft: 512
+        hop_ms: 10
+        window_ms: 25
+        n_mels: 80
+        n_mfcc: null
+    temporal_differences: false
+    stack_differences: false
+    cachedir: null
+model:
+    name: self-attention
+    self_attention:
+        num_layers: 3
+        d_model: 128
+        dropout: 0.5
+optimizer:
+    name: adam
+    lr: 0.0001
+    adam:
+        eps: 1e-9
+        weight_decay_val: 0
+lr_scheduler: null
+gradient_clip_val: null
+gradient_accumulation_steps: 1
+batch_size: 1024
+epochs: 2
+resume_from_checkpoint: null
+log_interval: 500
+check_val_every_n_epoch: 1
+random_seed: 0
+num_workers: 0

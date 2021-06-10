@@ -17,8 +17,6 @@ repos:
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
-      - id: check-added-large-files
-        args: ["--maxkb=500"]
       - id: sort-simple-yaml
       - id: requirements-txt-fixer
       - id: check-json
@@ -31,13 +29,8 @@ repos:
       # but, currently(2021.04.29) pytest repository does not have `.pre-commit-hooks.yaml`
       - id: pytest
         name: pytest
-        entry: sh -c "source .env.sh && python3 -m pytest --cov=trumpet tests/"
+        entry: sh -c "source .env.sh && python3 -m pytest --cov=vad tests/"
         language: system
         pass_filenames: false
         always_run: true
         verbose: true
-
-      - id: clean
-        name: clean
-        entry: make clean
-        language: system

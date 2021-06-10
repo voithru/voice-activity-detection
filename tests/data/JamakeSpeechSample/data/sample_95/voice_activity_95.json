@@ -1,0 +1,16 @@
+{
+    "version": "v0.3",
+    "duration": "00:01:00.000",
+    "activities": [
+        {
+            "start": "00:00:44.986",
+            "end": "00:00:49.482"
+        },
+        {
+            "start": "00:00:49.812",
+            "end": "00:00:54.622"
+        }
+    ],
+    "probs_sample_rate": null,
+    "probs": null
+}
