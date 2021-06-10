@@ -25,24 +25,23 @@ $ pip install -r requirements.txt
 
 ### Main
 ```bash
-$ main.py --help
+$ python main.py --help
 ```
 
-### For test
 ### Training
 ```bash
-$ cd tests
-$ python test_train.py 
+$ python main.py train --help
+Usage: main.py train [OPTIONS] CONFIG_PATH
 ```
 ### Evaluation
 ```bash
-$ cd tests
-$ python test_evaluate.py
+$ python main.py evaluate --help
+Usage: main.py evaluate [OPTIONS] EVAL_PATH CHECKPOINT_PATH
 ```
 ### Inference
 ```bash
-$ cd tests
-$ python test_predict.py
+$ python main.py predict --help
+Usage: main.py predict [OPTIONS] AUDIO_PATH CHECKPOINT_PATH
 ```
 
 ## Overview
@@ -55,13 +54,13 @@ $ python test_predict.py
 ### Results
 
 <p align="center">
-  <img width="350" alt="teaser" src="./figures/benchmark_1.png">
+  <img width="500" alt="teaser" src="./figures/benchmark_1.png">
   <br>
   <b>Figure. Test result - Noisex92</b>
 </p>
 
 <p align="center">
-  <img width="350" alt="teaser" src="./figures/benchmark_2.png">
+  <img width="500" alt="teaser" src="./figures/benchmark_2.png">
   <br>
   <b>Figure. Test result - Real-world audio dataset</b>
 </p>
